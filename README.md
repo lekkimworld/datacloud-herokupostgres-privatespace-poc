@@ -1,5 +1,5 @@
 # Using Heroku Postgres in Private Space from Data Cloud
-This repo is mainly a note-to-self kind of thing... When using Heroku Postgres in a Private Space data in Data Cloud you need to use mTLS to connect, enable external connections (by default private space Heroku Postgres plans are only accessible inside the space= and whitelist the IP's connecting to Heroku Postgres. 
+This repo is mainly a note-to-self kind of thing... When using Heroku Postgres in a Private Space data in Data Cloud you need to use mTLS to connect, enable external connections (by default private space Heroku Postgres plans are only accessible inside the space) and whitelist the IP's connecting to Heroku Postgres. 
 
 Steps are as follows:
 1. In Data Cloud Setup find your Data Cloud "Home Org Instance" as this will tell you where the instance is hosted. This will be something like `CDP2-AWS-PROD1-USEAST1`. Once you have it refer to the [documentation](https://help.salesforce.com/s/articleView?id=data.c360_a_data_cloud_ip_address_allowlist.htm&type=5) for the IP addresses to whitelist in CIDR format. As of this writing the IP addresses are: "54.204.177.212/32", "35.153.189.123/32", "54.82.22.132/32", "54.87.94.242/32", "52.200.70.195/32", "3.223.146.214/32".
